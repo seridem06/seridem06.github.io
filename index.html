@@ -1,172 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Portafolio |frank-oviedo-255813188>
-        <meta name="robots" content="index,follow">
-        <link rel="shortcut icon" href="images/avIcon.png" type="image/x-icon">
-        <title>FRANK OVIEDO</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Frank Oviedo, desarrollador mobile junior en Arequipa, Perú. Apps con Flutter y SwiftUI, APIs en Java Spring Boot y Node.js.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Frank Oviedo | Desarrollador Mobile Junior">
+    <meta property="og:description" content="Apps para Android e iOS con Flutter y SwiftUI, conectadas a APIs en Java Spring Boot y Node.js.">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="images/avIcon.png" type="image/x-icon">
+    <title>Frank Oviedo | Desarrollador Mobile Junior</title>
 
-        <!--Style animation-->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <!--styles-->
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/sections.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <!--Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <!--link icons-->
-        <script src="https://kit.fontawesome.com/0cf3687c78.js" crossorigin="anonymous"></script>
-    </head>
+    <!--Style animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <!--styles-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--link icons-->
+    <script src="https://kit.fontawesome.com/0cf3687c78.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
+    <a class="skip" href="#sobreMi">Saltar al contenido</a>
 
-    <header class="header" >
-       
-        <nav class="header_nav">
-            <div class="header_nav_logo"><a href="index.html">
-                <span style="--item:1"><Fieldset></Fieldset></span>
-                <span style="--item:2">F</span>
-                <span style="--item:3">R</span>
-                <span style="--item:4">A</span>
-                <span style="--item:5">N</span>
-                <span style="--item:6">K</span>
-                <span style="--item:2">😈</span>
-                <span style="--item:3">O</span>
-                <span style="--item:4">V</span>
-                <span style="--item:5">I</span>
-                <span style="--item:6">E</span>
-                <span style="--item:2">D</span>
-                <span style="--item:3">O</span>
-               </a></div>
-            <button class="header_nav_toggle"><i class="fas fa-bars"></i></button>
-            <div class="header_nav_menu">
-                <a href="#home">Home</a>
+    <header class="header" id="header">
+        <nav class="header_nav" aria-label="Principal">
+            <div class="header_nav_logo">
+                <a href="#home" aria-label="Frank Oviedo, inicio">FRANK<span class="dot">.</span>OVIEDO</a>
+            </div>
+            <button class="header_nav_toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="header_nav_menu" id="navMenu">
+                <a href="#home">Inicio</a>
                 <a href="#sobreMi">Sobre mí</a>
                 <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#formacion">Formación</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
-
     </header>
 
+    <main>
+        <section class="home" id="home">
 
-    <section class="home" id="home" data-aos="fade-right" data-aos-duration="1500">
-
-        <div class="home_socialLinks">
-            <div class="container_home_socialLinks">
-                <a href="https://www.linkedin.com/in/frank-oviedo-255813188/" target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/seridem06" target="_blank" ><i class="fa-brands fa-square-github"></i></a>
-            </div>
-        </div>
-
-        <div class="home_info">
-            
-            <div class="container_home_info">
-                <p class="home_text_1">Hola! Soy</p>
-                <p class="home_text_2">Frank Oviedo</p>
-                <p class="home_text_3">Estudiante de Diseño de Software</p>
-                <p class="home_text_4">
-                    Este es mi sitio web donde puedes encontrar informacion sobre los proyectos donde
-                    trabaje , y tambien los proyectos donde actualmente trabajo. soy estudiante de diseño de sottware, y esta es mi primera pagina web con css, me gusta todo lo relacionado con las computadoras, es mi tercer semestre de la carrera de diseño de software en TECSUP </p>
-            </div>
-           
-        </div>
-
-        <picture class="home_picture">
-            <img src="./images/perfil.jpeg" alt="image perfil" class="home_picture_image">
-        </picture>
-      
-    </section>
-
-    <section class="sobreMi" id="sobreMi">
-        <div class="sobreMi_container">
-            <h1 class="sobreMi_text_1">Sobre mí</h1>
-            <p class="sobreMi_text_3" data-aos="fade-right" data-aos-duration="1000">Soy estudiante de diseño de software y este es mi primer diseño aplicando etiquetas CSS, tambien lleve cursos de diseño de paginas web en AluraONE una capacitación que dio ORACLE me especializo actualmente en  BACKEND</p>
-        </div>
-    </section>
-
-    <section class="habilidades" id="habilidades">
-        <h1 class="habilidades_text_1">Mis Habilidades</h1>
-        <div class="cards_container_habilidades">
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-html.png" alt="Icono de HTML">
-                <p>HTML 5</p>
-            </div>
-            
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-css.png" alt="Icono de CSS">
-                <p>CSS 3</p>
+            <div class="home_socialLinks">
+                <div class="container_home_socialLinks">
+                    <a href="https://www.linkedin.com/in/frank-oviedo-255813188/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://github.com/seridem06" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-square-github" aria-hidden="true"></i></a>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-js.png" alt="Icono de JavaScript">
-                <p>JavaScript</p>
+            <div class="home_info">
+                <div class="container_home_info">
+                    <p class="home_status">Arequipa, Perú · Disponible para trabajar</p>
+                    <p class="home_text_1">Hola, soy</p>
+                    <h1 class="home_text_2">Frank Oviedo</h1>
+                    <p class="home_text_3">Desarrollador Mobile Junior</p>
+                    <p class="home_text_4">
+                        Construyo apps para Android e iOS con Flutter y SwiftUI, conectadas a APIs en Java Spring Boot y Node.js.
+                        Estudio Diseño y Desarrollo de Software en Tecsup y soy egresado de Oracle Next Education.
+                    </p>
+                    <div class="home_actions">
+                        <a class="btn btn_primary" href="#proyectos">Ver proyectos</a>
+                        <a class="btn btn_outline" href="#contacto">Contactar</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-react.png" alt="Icono de JavaScript">
-                <p>React</p>
+            <picture class="home_picture">
+                <img src="./images/perfil.jpeg" alt="Foto de perfil de Frank Oviedo" class="home_picture_image" width="300" height="300">
+            </picture>
+
+        </section>
+
+        <section class="sobreMi" id="sobreMi">
+            <div class="sobreMi_container">
+                <h2 class="sobreMi_text_1">Sobre mí</h2>
+                <p class="sobreMi_text_3" data-aos="fade-up" data-aos-duration="800">
+                    Elegí cambiar de rumbo hacia el desarrollo de software y me enfoco en apps móviles útiles para el día a día:
+                    educación, transporte y pagos. Trabajo con arquitectura MVVM, consumo de APIs REST y bases de datos en la nube.
+                    Aprendo rápido por mi cuenta y documento mi trabajo en GitHub.
+                </p>
+                <div class="facts">
+                    <div class="fact" data-aos="fade-up" data-aos-duration="800"><strong>343 h</strong><span>Oracle Next Education</span></div>
+                    <div class="fact" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><strong>2</strong><span>Plataformas: Android e iOS</span></div>
+                    <div class="fact" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><strong>80+</strong><span>Unidades en mi sistema de reportes</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h2 class="habilidades_text_1">Mis Habilidades</h2>
+
+            <h3 class="habilidades_group">Mobile</h3>
+            <div class="cards_container_habilidades">
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-flutter.svg" alt="Logo de Flutter" loading="lazy">
+                    <p>Flutter</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-dart.svg" alt="Logo de Dart" loading="lazy">
+                    <p>Dart</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-swift.svg" alt="Logo de Swift" loading="lazy">
+                    <p>Swift / SwiftUI</p>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-python.png" alt="Icono de Java">
-                <p>Python</p>
+            <h3 class="habilidades_group">Backend</h3>
+            <div class="cards_container_habilidades">
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-java.png" alt="Logo de Java" loading="lazy">
+                    <p>Java</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-spring.svg" alt="Logo de Spring Boot" loading="lazy">
+                    <p>Spring Boot</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-nodejs.svg" alt="Logo de Node.js" loading="lazy">
+                    <p>Node.js</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-python.png" alt="Logo de Python" loading="lazy">
+                    <p>Python</p>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-java.png" alt="Icono de Tailwind">
-                <p>Java</p>
+            <h3 class="habilidades_group">Datos</h3>
+            <div class="cards_container_habilidades">
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-mySQL.png" alt="Logo de MySQL" loading="lazy">
+                    <p>MySQL</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-postgresql.svg" alt="Logo de PostgreSQL" loading="lazy">
+                    <p>PostgreSQL</p>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-git.png" alt="Icono de Git">
-                <p>Git</p>
-            </div>
-            
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-github.png" alt="Icono de GitHub">
-                <p>Github</p>
+            <h3 class="habilidades_group">Web y herramientas</h3>
+            <div class="cards_container_habilidades">
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-html.png" alt="Logo de HTML 5" loading="lazy">
+                    <p>HTML 5</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-css.png" alt="Logo de CSS 3" loading="lazy">
+                    <p>CSS 3</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-js.png" alt="Logo de JavaScript" loading="lazy">
+                    <p>JavaScript</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-react.png" alt="Logo de React" loading="lazy">
+                    <p>React</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-php.png" alt="Logo de PHP" loading="lazy">
+                    <p>PHP</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-git.png" alt="Logo de Git" loading="lazy">
+                    <p>Git</p>
+                </div>
+                <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="800">
+                    <img src="./images/icon-github.png" alt="Logo de GitHub" loading="lazy">
+                    <p>GitHub</p>
+                </div>
             </div>
 
-            <div class="cards_habilidades" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./images/icon-php.png" alt="Icono de Trello">
-                <p>PHP</p>
-            </div>
-        </div>
-    </section>
+            <p class="habilidades_more">También trabajo con</p>
+            <ul class="chips chips_center">
+                <li>Next.js</li><li>Django REST</li><li>ASP.NET Core</li><li>JPA/Hibernate</li>
+                <li>Supabase</li><li>Firebase</li><li>MongoDB</li><li>SQLite</li>
+                <li>AWS</li><li>Oracle Cloud</li><li>Docker</li><li>Swagger</li>
+            </ul>
+        </section>
 
+        <section class="proyectos" id="proyectos">
+            <h2 class="proyectos_text_1">Proyectos</h2>
+            <div class="cards_container_proyectos">
+
+                <article class="cards_proyectos cards_proyectos_featured" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Vozi</span><span class="thumb_tag">Destacado</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Android · iOS · Web</p>
+                        <h3>Vozi</h3>
+                        <p>App de reconocimiento de voz para que niños practiquen pronunciación. Avanza sola cuando la palabra se dice bien. Versión iOS con síntesis de voz y Supabase con seguridad por filas (RLS).</p>
+                        <ul class="chips"><li>Flutter</li><li>SwiftUI</li><li>Supabase</li><li>MVVM</li></ul>
+                    </div>
+                    <div class="container_btn_proyectos">
+                        <a class="btn_proyectos repo" href="https://github.com/seridem06/colab_vozi" target="_blank" rel="noopener">Repositorio</a>
+                    </div>
+                </article>
+
+                <article class="cards_proyectos" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Taxi Tracker</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Android</p>
+                        <h3>Taxi Tracker</h3>
+                        <p>Rastreador de taxis en tiempo real con mapa, almacenamiento local y notificaciones.</p>
+                        <ul class="chips"><li>Flutter</li><li>Socket.IO</li><li>SQLite</li></ul>
+                    </div>
+                </article>
+
+                <article class="cards_proyectos" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Yape TTS</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Android</p>
+                        <h3>Yape TTS Notifier</h3>
+                        <p>Lee en voz alta las notificaciones de pago de Yape, con servicio en primer plano para funcionar en segundo plano.</p>
+                        <ul class="chips"><li>Flutter</li><li>Text-to-Speech</li></ul>
+                    </div>
+                </article>
+
+                <article class="cards_proyectos" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Acceso QR</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Móvil · Web</p>
+                        <h3>Control de Acceso QR</h3>
+                        <p>Códigos QR con tokens cifrados y temporales que evitan la reutilización. Lector en Flutter y WebApp.</p>
+                        <ul class="chips"><li>Flutter</li><li>Node.js</li><li>JWT</li></ul>
+                    </div>
+                </article>
+
+                <article class="cards_proyectos" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Monitoreo</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Web API</p>
+                        <h3>Monitoreo de Transporte</h3>
+                        <p>Control de buses con arquitectura hexagonal: carga de horas por Excel, rutas en Google Maps y reportes de retrasos.</p>
+                        <ul class="chips"><li>ASP.NET Core</li><li>PostgreSQL</li><li>Swagger</li></ul>
+                    </div>
+                </article>
+
+                <article class="cards_proyectos" data-aos="fade-up" data-aos-duration="800">
+                    <div class="container_imgCard_proyectos"><span class="thumb_title">Retrasos</span></div>
+                    <div class="container_textCard_proyectos">
+                        <p class="proj_plat">Python</p>
+                        <h3>Reporte de Retrasos</h3>
+                        <p>Convierte el Excel diario de horas de paso en el reporte de retrasos y el cuadro de pagos de más de 80 unidades.</p>
+                        <ul class="chips"><li>Python</li><li>Pandas</li><li>Google Colab</li></ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="formacion" id="formacion">
+            <h2 class="formacion_text_1">Formación</h2>
+            <div class="cards_container_formacion">
+                <article class="cards_formacion" data-aos="fade-up" data-aos-duration="800">
+                    <p>En curso</p>
+                    <h3>Diseño y Desarrollo de Software</h3>
+                    <p>Tecsup, Arequipa</p>
+                </article>
+                <article class="cards_formacion" data-aos="fade-up" data-aos-duration="800">
+                    <p>2023</p>
+                    <h3>Oracle Next Education G4</h3>
+                    <p>Oracle y Alura Latam · 343 horas · Java, Spring Boot, POO y Business Agility</p>
+                    <a class="card_link" href="https://app.aluracursos.com/user/oviedofrank6/fullCertificate/31800fe9ff8455b43e87946f7bfa3fa6" target="_blank" rel="noopener">Ver certificado</a>
+                </article>
+                <article class="cards_formacion" data-aos="fade-up" data-aos-duration="800">
+                    <p>2023</p>
+                    <h3>SQL con MySQL Server</h3>
+                    <p>Alura Latam</p>
+                </article>
+                <article class="cards_formacion" data-aos="fade-up" data-aos-duration="800">
+                    <p>2023</p>
+                    <h3>Python y Data Science en OCI</h3>
+                    <p>Alura Latam · Oracle Analytics</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2 class="contacto_text_1">Contacto</h2>
+            <p class="contacto_lede">¿Tienes una app en mente? Cuéntame qué necesitas y te respondo el mismo día.</p>
+            <div class="contact_cards">
+                <a class="contact_card" href="mailto:oviedofrank6@gmail.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span>Correo</span>
+                    <strong>oviedofrank6@gmail.com</strong>
+                </a>
+                <a class="contact_card" href="https://wa.me/51930416736" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    <span>WhatsApp</span>
+                    <strong>+51 930 416 736</strong>
+                </a>
+                <a class="contact_card" href="https://www.linkedin.com/in/frank-oviedo-255813188/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                    <strong>frank-oviedo-255813188</strong>
+                </a>
+                <a class="contact_card" href="https://github.com/seridem06" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-square-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                    <strong>seridem06</strong>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer id="footer">
         <div class="footer_derechos">
-            <p>2023 © All rights reserved </p>
+            <p>2026 © Frank Oviedo. Todos los derechos reservados</p>
         </div>
 
         <div class="footer_redes">
-              <a href="https://www.linkedin.com/in/frank-oviedo-255813188/" target="_blank" ><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-                <a href="https://github.com/seridem06" target="_blank" ><i class="fa-brands fa-square-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/frank-oviedo-255813188/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+            <a href="https://github.com/seridem06" target="_blank" rel="noopener"><i class="fa-brands fa-square-github" aria-hidden="true"></i> GitHub</a>
+            <a href="mailto:oviedofrank6@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Correo</a>
         </div>
-                   
+
         <div class="footer_disigned">
-            <p>Designed by <span class="nameDesigned">FRANK_OVIEDO</span> </p>
+            <p>Diseñado por <span class="nameDesigned">FRANK_OVIEDO</span></p>
         </div>
     </footer>
 
     <!-- Js animation-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init({ once: true, disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
     </script>
 
     <!-- Js mine -->
     <script src="scripts/script.js"></script>
-        
+
 </body>
 
 </html>

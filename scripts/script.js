@@ -1,25 +1,36 @@
-/* Funcion para mostrar y oculatr el  menu */
-const navToggle = document.querySelector(".header_nav_toggle");
-const navMenu = document.querySelector(".header_nav_menu");
+/* Menú móvil */
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+const navLinks = navMenu.querySelectorAll("a");
 
-const header = document.querySelector(".header");/*Esto es solo por detalles de apariencias, pero no esnecesario (por el tema del backDrop blur en la cabecerea) */
-
-//cuando le doy click al navToggle
-navToggle.addEventListener("click", () => {/*funcion anonima, pude haber utilizado la de abajo*/
-  navMenu.classList.toggle("header_nav_menu_visible");//esto es todo este togle lo que hace es que si el elemento no tiene esa clase pues se la agrega y si la tiene se la quita y esa clase solo va estar disponible cuando la resolucion es menor a 785 y la configuracaion ya esta hecha en el css
-  header.classList.toggle("header_new");/* ni esto, son solo detalles (backdrop blur en la cabecera)*/
-});
-
-
-/* Esto es para que se cierre el menu si preciono una opcion cuando este este abierto */
-/* Podria utilizar la misma funcion para ahorrar codigo, pero es divivirlo para que sea mas entendible */
-const navMenuList = navMenu.querySelectorAll("a");
-
-function closeOpenNavMenu() {
-  navMenu.classList.toggle("header_nav_menu_visible");//esto es todo este togle lo que hace es que si el elemento no tiene esa clase pues se la agrega y si la tiene se la quita y esa clase solo va estar disponible cuando la resolucion es menor a 785 y la configuracaion ya esta hecha en el css
-  header.classList.toggle("header_new");/* ni esto, son solo detalles */
+function setMenu(open) {
+  navMenu.classList.toggle("header_nav_menu_visible", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  navToggle.firstElementChild.className = open ? "fas fa-xmark" : "fas fa-bars";
+  document.body.style.overflow = open ? "hidden" : "";
 }
 
-navMenuList.forEach(element => {/* recorro mi lista para aplicarle el addEvent */
-  element.addEventListener("click", closeOpenNavMenu);
+navToggle.addEventListener("click", () => {
+  setMenu(!navMenu.classList.contains("header_nav_menu_visible"));
 });
+
+/* Cierra el menú al elegir una opción o al pulsar Escape */
+navLinks.forEach((link) => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setMenu(false);
+});
+
+/* Marca en el menú la sección visible */
+const sections = document.querySelectorAll("main section[id]");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id);
+      });
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  sections.forEach((section) => observer.observe(section));
+}

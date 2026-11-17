@@ -2,11 +2,21 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}    
+}
 
 :root {
-    --whiteColor-text:  rgba(240, 248, 255, 0.863);
+    --whiteColor-text: rgba(240, 248, 255, 0.82);
+    --muted: rgba(240, 248, 255, 0.72);
+    --blue: #0059a6;          /* relleno de botones (texto blanco) */
+    --blue-text: #5eb0ff;     /* texto de acento sobre fondo oscuro */
+    --glass: rgba(0, 0, 0, 0.32);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --PT-Sans: 'PT Sans', sans-serif;
+    --Open-Sans: 'Open Sans', sans-serif;
+    --ease: cubic-bezier(.22, 1, .36, 1);
 }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 /*MODiFICACIONES AL SCROLL BAR ORIGINAL*/
 html::-webkit-scrollbar {
@@ -23,10 +33,84 @@ html::-webkit-scrollbar-thumb {
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    background: url(../images/fondo.jpg) ;
+    font-family: var(--Open-Sans);
+    color: #fff;
+    line-height: 1.6;
+    background: url(../images/fondo.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Capa oscura para asegurar contraste del texto sobre la foto de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(3, 5, 10, 0.55), rgba(3, 5, 10, 0.78));
+}
+
+a { color: inherit; }
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--blue-text);
+    outline-offset: 3px;
+}
+
+.skip {
+    position: absolute;
+    left: 16px;
+    top: -64px;
+    z-index: 10;
+    background: var(--blue);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+.skip:focus { top: 8px; }
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 24px;
+    border-radius: 5rem;
+    font-family: var(--Open-Sans);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(.97); }
+.btn_primary { background: var(--blue); border: 2px solid var(--blue); color: #fff; }
+.btn_primary:hover { background: #0a72cf; border-color: #0a72cf; }
+.btn_outline { background: transparent; border: 2px solid var(--blue-text); color: var(--blue-text); }
+.btn_outline:hover { background: var(--blue-text); color: #04101d; }
+
+/* Chips de tecnologías */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+.chips li {
+    padding: 4px 10px;
+    border-radius: 5rem;
+    border: 1px solid rgba(94, 176, 255, 0.35);
+    color: var(--whiteColor-text);
+    font-size: .75rem;
+    letter-spacing: .04rem;
+}
+.chips_center { justify-content: center; max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
